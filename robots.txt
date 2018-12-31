@@ -1,1 +1,1 @@
-Sitemap: https://woochan-hwang.github.io/Halve/sitemap.xml
+Sitemap: https://woochan-hwang.github.io//sitemap.xml
