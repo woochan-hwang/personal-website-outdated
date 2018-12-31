@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://woochan-hwang.github.io/Halve/feed.xml" rel="self" type="application/atom+xml" /><link href="https://woochan-hwang.github.io/Halve/" rel="alternate" type="text/html" /><updated>2018-12-31T03:18:57+00:00</updated><id>https://woochan-hwang.github.io/Halve/feed.xml</id><title type="html">Woochan Hwang</title><subtitle>Medical Student with passion in ML</subtitle><entry><title type="html">Halve Jekyll Theme</title><link href="https://woochan-hwang.github.io/Halve/halve-theme/" rel="alternate" type="text/html" title="Halve Jekyll Theme" /><published>2016-05-29T00:00:00+01:00</published><updated>2016-05-29T00:00:00+01:00</updated><id>https://woochan-hwang.github.io/Halve/halve-theme</id><content type="html" xml:base="https://woochan-hwang.github.io/Halve/halve-theme/">&lt;p&gt;&lt;a href=&quot;https://woochan-hwang.github.io/Halve/images/halve-home-image.png&quot;&gt;&lt;img src=&quot;https://woochan-hwang.github.io/Halve/images/halve-home-image.png&quot; alt=&quot;Home Page of Halve&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://woochan-hwang.github.io/Halve/feed.xml" rel="self" type="application/atom+xml" /><link href="https://woochan-hwang.github.io/Halve/" rel="alternate" type="text/html" /><updated>2018-12-31T03:31:19+00:00</updated><id>https://woochan-hwang.github.io/Halve/feed.xml</id><title type="html">Woochan Hwang</title><subtitle>Medical Student with passion in ML</subtitle><entry><title type="html">Halve Jekyll Theme</title><link href="https://woochan-hwang.github.io/Halve/halve-theme/" rel="alternate" type="text/html" title="Halve Jekyll Theme" /><published>2016-05-29T00:00:00+01:00</published><updated>2016-05-29T00:00:00+01:00</updated><id>https://woochan-hwang.github.io/Halve/halve-theme</id><content type="html" xml:base="https://woochan-hwang.github.io/Halve/halve-theme/">&lt;p&gt;&lt;a href=&quot;https://woochan-hwang.github.io/Halve/images/halve-home-image.png&quot;&gt;&lt;img src=&quot;https://woochan-hwang.github.io/Halve/images/halve-home-image.png&quot; alt=&quot;Home Page of Halve&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;center&gt;&lt;b&gt;Halve&lt;/b&gt; is a stylish, two-column jekyll theme.&lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -260,8 +260,6 @@ image: http://example.com/some-image.png
 
 &lt;p&gt;An example of a Gist embed below.&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
 &lt;script src=&quot;https://gist.github.com/e813c2560b0f1ecc9f5d.js?file=pacman.patch&quot;&gt; &lt;/script&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
