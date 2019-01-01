@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/review-of-2018/</loc>
+<loc>https://woochan-hwang.github.io/review-of-2018/</loc>
 <lastmod>2018-12-31T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>https://woochan-hwang.github.io/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/posts.html</loc>
+<loc>https://woochan-hwang.github.io/posts.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/tags.html</loc>
+<loc>https://woochan-hwang.github.io/tags.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/assets/Machine_Learning_based_Denoising_of_Electrocardiogram_Signals_from_a_Wearable_ECG_Monitor.pdf</loc>
+<loc>https://woochan-hwang.github.io/assets/Machine_Learning_based_Denoising_of_Electrocardiogram_Signals_from_a_Wearable_ECG_Monitor.pdf</loc>
 <lastmod>2018-12-31T14:47:15+00:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/assets/Woochan_Hwang_CV__web.pdf</loc>
+<loc>https://woochan-hwang.github.io/assets/Woochan_Hwang_CV__web.pdf</loc>
 <lastmod>2018-12-27T06:52:43+00:00</lastmod>
 </url>
 </urlset>
