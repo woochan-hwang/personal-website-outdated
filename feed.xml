@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://woochan-hwang.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://woochan-hwang.github.io/" rel="alternate" type="text/html" /><updated>2019-02-10T17:35:18+00:00</updated><id>https://woochan-hwang.github.io/feed.xml</id><title type="html">Woochan Hwang</title><subtitle>Medical Student with passion in ML</subtitle><entry><title type="html">At the End of 2018</title><link href="https://woochan-hwang.github.io/review-of-2018/" rel="alternate" type="text/html" title="At the End of 2018" /><published>2018-12-31T00:00:00+00:00</published><updated>2018-12-31T00:00:00+00:00</updated><id>https://woochan-hwang.github.io/review-of-2018</id><content type="html" xml:base="https://woochan-hwang.github.io/review-of-2018/">&lt;p&gt;On the last day of 2018, I’m sitting in my living room trying to finish up my first website. After many commits and banging my head on the table, I ended up with this beautiful Jekyll theme, which was mostly based on the work of &lt;a href=&quot;https://github.com/srekoble&quot;&gt;Vangelis Tzortzis&lt;/a&gt; (&lt;a href=&quot;http://vangeltzo.com/&quot;&gt;vangeltzo.com&lt;/a&gt;). Though it turned out to be slightly more challenging than expected, I’m pretty content with the result.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://woochan-hwang.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://woochan-hwang.github.io/" rel="alternate" type="text/html" /><updated>2019-02-15T11:41:05+00:00</updated><id>https://woochan-hwang.github.io/feed.xml</id><title type="html">Woochan Hwang</title><subtitle>Medical Student with passion in ML</subtitle><entry><title type="html">Machine Learning in Psychiatry</title><link href="https://woochan-hwang.github.io/Machine-learning-in-Psychiatry/" rel="alternate" type="text/html" title="Machine Learning in Psychiatry" /><published>2019-02-08T00:00:00+00:00</published><updated>2019-02-08T00:00:00+00:00</updated><id>https://woochan-hwang.github.io/Machine-learning-in-Psychiatry</id><content type="html" xml:base="https://woochan-hwang.github.io/Machine-learning-in-Psychiatry/">&lt;p&gt;Last week I attended yet another hackathon - the &lt;a href=&quot;http://medtechsuperconnector.com/&quot;&gt;MedTech SuperConnector challenge&lt;/a&gt;. The topic of the weekend was mental health, and coincidently it happened at the end of my 6 week psychiatric attachment. Instead of talking about our idea, which is I feel is not developed enough for a post, I wanted to write about some fundamental difficulties in taking a data driven approach for psychiatric conditions. I will give a brief introduction to how such conditions are defined clinically, discuss the current approaches and end with my opinion on how we should approach this field.&lt;/p&gt;
+
+&lt;h2 id=&quot;clinical-classification&quot;&gt;Clinical classification&lt;/h2&gt;
+
+&lt;p&gt;There are two main classification guidelines used by clinicians for mental disorders: ICD-10 (11th revision released in 2018) endorsed by the World Health Organisation and DSM-IV endorsed by the American Psychiatric Association. For the purpose of this post, I will use the &lt;a href=&quot;https://www.who.int/classifications/icd/en/bluebook.pdf&quot;&gt;ICD-10 guideline&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The ICD-10 groups mental disorders in the following large categories:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Organic disorders - mainly dementia&lt;/li&gt;
+  &lt;li&gt;Substance abuse&lt;/li&gt;
+  &lt;li&gt;Schizophrenia and delusional disorders&lt;/li&gt;
+  &lt;li&gt;Mood disorders&lt;/li&gt;
+  &lt;li&gt;Neurotic and stress related disorders&lt;/li&gt;
+  &lt;li&gt;Behavioural, personality, developmental disorders&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I have rephrased and combined the last few categories for the non-clinical readers. Of these, I will discuss mood disorders as they currently seem to be one of the most popular topics for machine learning applications.&lt;/p&gt;
+
+&lt;h3 id=&quot;mood-disorders---depression&quot;&gt;Mood Disorders - depression&lt;/h3&gt;
+
+&lt;p&gt;This category includes mania related conditions as well. However, due to its relative frequency, most recent works have focused on depression. Here is how depression is described:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In typical depressive episodes of all three varieties described below (mild, moderate, and severe) the individual usually suffers from depressed mood, loss of interest and enjoyment, and reduced energy leading to increased fatiguability and diminished activity. Marked tiredness after only slight effort is common. [F32 Depressive episode, ICD-10]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In clinical practice, we often use the PHQ-9 questionnaire, which was developed by Pfizer based on the above description (they cited the APA guidelines but that is irrelevant here). The questionnaire begins with the following question: “Over the last two weeks, how often have you been bothered by any of the following problems?”. The nine problems that follow are “Little interest or pleasure in doing things?”, “Feeling down, depressed, or hopeless?”, and etc. Patients are asked to answer the above questions in one of the four choices (not at all, some days, most days, all days), which is converted to a score of 0 ~ 3 respectively.&lt;/p&gt;
+
+&lt;p&gt;As subjective as the above method may seem, a &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pubmed/11556941&quot;&gt;validation study&lt;/a&gt; of the PHQ-9 survey showed that a score &amp;gt;= 10 had a 88% specificity and 88% sensitivity for major depression. So far so good. However, the paper itself states that the positive predictive score for the mild and moderate thresholds drops significantly to 31%. Furthermore, the original study does not include how sensitive the scores are to the change of patient state. The only two studies&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0165032703001988&quot;&gt;1&lt;/a&gt;,&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2894391/&quot;&gt;2&lt;/a&gt; that I found to have attempted this both conclude that a better trial is required to assess the hypothesis. Considering the inherent subjectiveness of not only the questionnaire but also the definition of a depressive disorder, any quantitative analysis will likely have a huge uncertainty.&lt;/p&gt;
+
+&lt;h2 id=&quot;uncertainty---why-does-it-matter&quot;&gt;Uncertainty - why does it matter?&lt;/h2&gt;
+
+&lt;p&gt;We need to understand the character of the uncertainty in this situation. In &lt;a href=&quot;http://mlg.eng.cam.ac.uk/yarin/thesis/thesis.pdf&quot;&gt;Yarin Gal’s PhD thesis&lt;/a&gt;, he explains the possible sources of uncertainty in machine learning as follows:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;noisy data (our observed labels might be noisy, for example as a result of measurement imprecision, leading to aleatoric uncertainty)&lt;/li&gt;
+  &lt;li&gt;uncertainty in model parameters that best explain the observed data (a large number of possible models might be able to explain a given dataset, in which case we might be uncertain which model parameters to choose to predict with)&lt;/li&gt;
+  &lt;li&gt;structure uncertainty (what model structure should we use? how do we specify our model to extrapolate / interpolate well?).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These were written in the context of machine learning, however it is closely related to our discussion if you view the PHQ-9 as the first layer of a neural network model that extracts a certain set of features. The above can be rephrased.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;noisy data (depression severity is very subjective and easily influenced by environmental factors)&lt;/li&gt;
+  &lt;li&gt;model parameters (which of the PHQ-9 survey questions are most predictive?)&lt;/li&gt;
+  &lt;li&gt;structure uncertainty (is the PHQ-9 survey deep &amp;amp; wide enough?)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Understanding the source of uncertainty matters as it will change how we respond to them.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-do-we-do&quot;&gt;What do we do?&lt;/h2&gt;
+
+&lt;p&gt;There are several approaches to what we can do to address each uncertainty. The first source, which is inherently caused by the lack of a quantitative definition of depression, can be considered using a probabilistic modelling approach to some degree. Fundamentally, we will need to gather more information from the subject about the spatiotemporal environment to rule out unrelated affects. Perhaps considering the approach of causal inference researchers may be worth a try.&lt;/p&gt;
+
+&lt;p&gt;The other two sources of uncertainty are to do with the PHQ-9 survey - a hand crafted feature extraction model. The development of deep neural networks have made such attempts obsolete in many domains and I believe depression is no exception. We need to look at the raw data, which in this case is the audio record of a consultation where the clinician assesses the descriptive criteria of depression. Although there are works attempting to predict depression from vocal prosody, many of them are limited by the fact that their labels are based on the PHQ-9 (or equivalent surveys) scores, which is the very source of uncertainty that we want to address. Attempts to predict depression from facial expressions are also interesting but problematic from the uncertainty perspective. As much as I agree with the potential benefit of this, we need to be careful as facial expression are likely to be ‘associated with’ depression but may not have a direct causal relationship with the clinical definition of depression.&lt;/p&gt;</content><author><name></name></author><category term="Machine Learning" /><category term="Psychiatry" /><category term="Mood Disorders" /><category term="Uncertainty" /><summary type="html">subjectivity in depression scoring</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://woochan-hwang.github.io/images/MTSC.jpeg" /></entry><entry><title type="html">At the End of 2018</title><link href="https://woochan-hwang.github.io/review-of-2018/" rel="alternate" type="text/html" title="At the End of 2018" /><published>2018-12-31T00:00:00+00:00</published><updated>2018-12-31T00:00:00+00:00</updated><id>https://woochan-hwang.github.io/review-of-2018</id><content type="html" xml:base="https://woochan-hwang.github.io/review-of-2018/">&lt;p&gt;On the last day of 2018, I’m sitting in my living room trying to finish up my first website. After many commits and banging my head on the table, I ended up with this beautiful Jekyll theme, which was mostly based on the work of &lt;a href=&quot;https://github.com/srekoble&quot;&gt;Vangelis Tzortzis&lt;/a&gt; (&lt;a href=&quot;http://vangeltzo.com/&quot;&gt;vangeltzo.com&lt;/a&gt;). Though it turned out to be slightly more challenging than expected, I’m pretty content with the result.&lt;/p&gt;
 
 &lt;p&gt;As the first post of the new website, I think a review of the main projects I worked on in 2018 is well suited given the time of the year.&lt;/p&gt;
 
